@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="learnOpenGL/learnOpenGL.vcxproj" />
+  <Project Path="learnOpenGL/learnOpenGL.vcxproj" Id="378c415f-20c9-454f-8f95-22eec86597c3" />
 </Solution>
