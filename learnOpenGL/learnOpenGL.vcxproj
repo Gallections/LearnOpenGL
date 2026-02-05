@@ -135,6 +135,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="glad.c" />
+    <ClCompile Include="hello_triangle.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
