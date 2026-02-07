@@ -36,6 +36,9 @@ GLFWwindow* initWindow(int width, int height) {
 	}
 
 	return window;
+	// Note that we might be concerned of potential dangling pointer by returning the pointer. But in fact, we are just handling off the <window> that is actually
+	// created on the Heap. The local pointer 'window' will indeed get destroyed when it's first created. But the value it creates will be handed off
+	// to the varible it gets assigned to. 
 }
 
 
@@ -51,6 +54,13 @@ float vertices[] = {
 
 
 int main() {
+	// Initialization of the windows:
+	GLFWwindow* myWindow = initWindow(800, 600);
+
+	if (myWindow == nullptr) {
+		return -1;
+	}
+
 	unsigned int VBO;
 	glGenBuffers(1, &VBO); // 1 specifies the number of buffer objects to generate. Asks OpenGL to generate a unique ID(name) for a new buffer object, and stores the ID number into the variable.
 
@@ -83,6 +93,46 @@ int main() {
 		glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
 		std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
 	}
+
+
+	// ==================== Creating a Fragment Shader ====================
+	const char* fragmentShaderSource = "#version 330 core\n"
+		"out vec4 FragColor;\n"
+		"void main() {\n"
+		"FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+		"}\0";
+	unsigned int fragmentShader;
+	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER); // glCreateShader only returns the id of the shader. But it allocates a shader object inside OpenGL.
+	// OpenGL can then use this id later on to find the right shader. 
+	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+	glCompileShader(fragmentShader);
+
+	glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
+
+	if (!success) {
+		glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
+		std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
+	}
+
+	// ================= Creating a shader program =======================
+	// This shaderProgram is what actually links all the shaders together. 
+	unsigned int shaderProgram;
+	shaderProgram = glCreateProgram();
+
+	glAttachShader(shaderProgram, vertexShader);
+	glAttachShader(shaderProgram, fragmentShader);
+	glLinkProgram(shaderProgram);
+
+	glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+	if (!success) {
+		glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+	}
+
+	// The resulting program object can be activated by calling glUseProgram with the id of the shaderProgram
+	glUseProgram(shaderProgram);
+	// Delete the shaderObjects once we've linked them into the program object.
+	glDeleteShader(vertexShader);
+	glDeleteShader(fragmentShader); // the glDelete marks the shader for deletion. It does not immediately delete, but will be destoryed when it gets disconnected.
 
 
 	return 0;
