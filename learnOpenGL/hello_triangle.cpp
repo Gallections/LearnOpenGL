@@ -70,12 +70,16 @@ int main() {
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
 
-	// ========================== Creating a vertex shader ========================================
+	// ========================== Creating a Vertex Shader ========================================
 	const char* vertexShaderSource = "#version 330 core\n"
 		"layout(location = 0) in vec3 aPos;\n"
 		"void main() {\n"
 		"gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
 		"}\0";
+	// it assigns attribute slot 0 to aPos. This is because OpenGL has a small numbered list of vertex attribute slots. 
+	// Then the shader says whaever is in slot 0 call it aPos.
+
+
 	unsigned int vertexShader;
 	vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	
@@ -114,7 +118,13 @@ int main() {
 		std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
 	}
 
-	// ================= Creating a shader program =======================
+	// ===================== Linking Vertex Attributes =========================
+	// Define Vertex Attributes:
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);  // This code says for every vertex, read 3 floats from my VBO and put them into slot 0.
+	glEnableVertexAttribArray(0); // takes the vertex attribute location as the argument.
+	
+
+	// ===================== Creating a shader program =======================
 	// This shaderProgram is what actually links all the shaders together. 
 	unsigned int shaderProgram;
 	shaderProgram = glCreateProgram();
@@ -133,7 +143,6 @@ int main() {
 	// Delete the shaderObjects once we've linked them into the program object.
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader); // the glDelete marks the shader for deletion. It does not immediately delete, but will be destoryed when it gets disconnected.
-
 
 	return 0;
 }
