@@ -1,148 +1,158 @@
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <iostream>
+#include<glad/glad.h>
+#include<GLFW/glfw3.h>
+#include<iostream>
 
-// Graphics pipeline is usually divided into 2 large parts: the first transforms your 3D coordinates into 2D coordinates and the 
-// second part transforms the 2D coordinates into the actual colored pixels. 
+//void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+//void processInput(GLFWwindow* window);
 
-// The graphics pipeline takes as input a set of 3D coordinates and transforms these to colored 2D pixels on your screen. The graphics
-// can be divied into several steps where each step requries the output of the previous step as its input. All of these steps are highly 
-// specialized (they have one speciific function) and can easily be executed in parallel. Due to the parallel nature, graphics cards of today
-// have thousands of small processing cores to quickly process your data within the graphics pipeline. The processing cores run small programs on the GPU
-// for each step of the pipeline. These small programs are called "Shaders".
+void processInput(GLFWwindow* window) {
+	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+		glfwSetWindowShouldClose(window, true);
+}
 
-// Shaders are written in OpenGL Shading Language (GLSL).
+void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
+	glViewport(0, 0, width, height);
+}
 
-GLFWwindow* initWindow(int width, int height) {
+// settings
+const unsigned int SCR_WIDTH = 800;
+const unsigned int SCR_HEIGHT = 600;
+
+const char* vertexShaderSource = "#version 330 core\n"
+	"layout(location = 0) in vec3 aPos; \n"
+	"void main()\n"
+	"{\n"
+	"	gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0); \n"
+	"}\0;";
+const char* fragmentShaderSource = "#version 330 core\n"
+	"out vec4 FragColor;\n"
+	"void main()\n"
+	"{\n"
+	"   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+	"}\0";
+
+int main() {
+	// glfw: initialize and configure
+	// ------------
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	GLFWwindow* window = glfwCreateWindow(width, height, "Hello Triangle", NULL, NULL);
+#ifdef __APPLE__
+	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+#endif
 
+	// glfw window creation
+	// -------
+	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
 	if (window == NULL) {
 		std::cout << "Failed to create GLFW window" << std::endl;
 		glfwTerminate();
-		return nullptr;
+		return -1;
 	}
-
 	glfwMakeContextCurrent(window);
+	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-	// Load GLAD (OpenGL function pointer)
+	// glad: load all OpenGL function pointers
+	// ---------------------------
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
 		std::cout << "Failed to initialize GLAD" << std::endl;
-		return nullptr;
-	}
-
-	return window;
-	// Note that we might be concerned of potential dangling pointer by returning the pointer. But in fact, we are just handling off the <window> that is actually
-	// created on the Heap. The local pointer 'window' will indeed get destroyed when it's first created. But the value it creates will be handed off
-	// to the varible it gets assigned to. 
-}
-
-
-
-// OpenGL doesn't simply transform all your 3D coordinates to 2D pixels on your screen; OpenGL only processes 3D coordinates when 
-// they are in a specific range between -1.0 and 1.0 on all 3 axes (x, y, and z). All coordinates within this NDC (Normalized Device Coordinates) range 
-// will end up visible on your screen.
-float vertices[] = {
-	-0.5f, -0.5f, 0.0f,
-	0.5f, -0.5f, 0.0f,
-	0.0f, 0.5f, 0.0f
-};
-
-
-int main() {
-	// Initialization of the windows:
-	GLFWwindow* myWindow = initWindow(800, 600);
-
-	if (myWindow == nullptr) {
 		return -1;
 	}
 
-	unsigned int VBO;
-	glGenBuffers(1, &VBO); // 1 specifies the number of buffer objects to generate. Asks OpenGL to generate a unique ID(name) for a new buffer object, and stores the ID number into the variable.
-
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	// From this point on, any buffer calls we make (on the GL_ARRAY_BUFFER target) will be used to configure the currently bound buffer, which is VBO.
-	// Then we can make a call to the glBufferData function that copies the previously defined vertex data into the buffer's memory.
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-
-	// ========================== Creating a Vertex Shader ========================================
-	const char* vertexShaderSource = "#version 330 core\n"
-		"layout(location = 0) in vec3 aPos;\n"
-		"void main() {\n"
-		"gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-		"}\0";
-	// it assigns attribute slot 0 to aPos. This is because OpenGL has a small numbered list of vertex attribute slots. 
-	// Then the shader says whaever is in slot 0 call it aPos.
-
-
-	unsigned int vertexShader;
-	vertexShader = glCreateShader(GL_VERTEX_SHADER);
-	
+	// build and compile our shader program.
+	// ----------
+	// vertex shader
+	unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
-	// The glShaderSource function takes the shader object to compile to its first argument. The second argument specifies how many strings we're passing as source code, 
-	// which is only one. The 3rd parameter is the actual source code of the vertex shader and we can leave the 4th paramter to NULL.
 	glCompileShader(vertexShader);
-
+	// check for shader compile errors
 	int success;
-	char infoLog[512]; // allocates 512 bytes to the character array.
+	char infoLog[512];
 	glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-	// the glGetShaderiv is an OpenGL function used to query specific information (paramters) about a compiled shader object, such as its compilation status. 
-
 	if (!success) {
 		glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-		std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+		std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << std::endl;
 	}
-
-
-	// ==================== Creating a Fragment Shader ====================
-	const char* fragmentShaderSource = "#version 330 core\n"
-		"out vec4 FragColor;\n"
-		"void main() {\n"
-		"FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
-		"}\0";
-	unsigned int fragmentShader;
-	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER); // glCreateShader only returns the id of the shader. But it allocates a shader object inside OpenGL.
-	// OpenGL can then use this id later on to find the right shader. 
+	// fragment shader
+	unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
 	glCompileShader(fragmentShader);
-
+	// check for shader compile errors
 	glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-
 	if (!success) {
 		glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
 		std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
 	}
 
-	// ===================== Linking Vertex Attributes =========================
-	// Define Vertex Attributes:
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);  // This code says for every vertex, read 3 floats from my VBO and put them into slot 0.
-	glEnableVertexAttribArray(0); // takes the vertex attribute location as the argument.
-	
-
-	// ===================== Creating a shader program =======================
-	// This shaderProgram is what actually links all the shaders together. 
-	unsigned int shaderProgram;
-	shaderProgram = glCreateProgram();
-
+	// Link shaders;
+	unsigned int shaderProgram = glCreateProgram();
 	glAttachShader(shaderProgram, vertexShader);
 	glAttachShader(shaderProgram, fragmentShader);
 	glLinkProgram(shaderProgram);
-
+	// check for linking errors
 	glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
 	if (!success) {
 		glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+		std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
+	}
+	glDeleteShader(vertexShader);
+	glDeleteShader(fragmentShader);
+
+	// set up vertex data (and buffer(s)) and configure vertex attributes
+	// -----------------
+	float vertices[] = {
+		-0.5f, -0.5f, 0.0f, // left
+		0.5f, -0.5f, 0.0f,
+		0.0f, 0.5f, 0.0f
+	};
+
+	unsigned int VBO, VAO;
+	glGenVertexArrays(1, &VAO);
+	glGenBuffers(1, &VBO);
+	// bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attribute(s);
+	glBindVertexArray(VAO);
+
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glEnableVertexAttribArray(0);
+
+	glBindBuffer(GL_ARRAY_BUFFER, 0); // this essentially unbinds the buffer.
+	
+	// we can also unbind the VAO afterwards, so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modify other 
+	// VAOs requries a call to glBindVertexArray anyways so we generally don't unbind VAO (nor VBOs) when it's not directly necessary.
+	glBindVertexArray(0);
+
+	// uncomment this call if to draw the wireframe polygons.
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
+	while (!glfwWindowShouldClose(window)) {
+		// input
+		processInput(window);
+
+		// render
+		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		// draw our first triangle
+		glUseProgram(shaderProgram);
+		glBindVertexArray(VAO);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
+		// glBindVertexArray(0); // no need to unbind every frame.
+
+		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
+		glfwSwapBuffers(window);
+		glfwPollEvents();
 	}
 
-	// The resulting program object can be activated by calling glUseProgram with the id of the shaderProgram
-	glUseProgram(shaderProgram);
-	// Delete the shaderObjects once we've linked them into the program object.
-	glDeleteShader(vertexShader);
-	glDeleteShader(fragmentShader); // the glDelete marks the shader for deletion. It does not immediately delete, but will be destoryed when it gets disconnected.
+	glDeleteVertexArrays(1, &VAO);
+	glDeleteBuffers(1, &VBO);
+	glDeleteProgram(shaderProgram);
 
+
+	glfwTerminate();
 	return 0;
-}
+}  

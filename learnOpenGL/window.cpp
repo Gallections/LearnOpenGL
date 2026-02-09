@@ -7,16 +7,17 @@
 
 // This callback function is intended to be used as a callback function 
 // when the window screen size gets resized. 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-	glViewport(0, 0, width, height);
-}
+//void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
+//	glViewport(0, 0, width, height);
+//}
+//
+//void processInput(GLFWwindow* window) {
+//	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+//		glfwSetWindowShouldClose(window, true);
+//	}
+//}
 
-void processInput(GLFWwindow* window) {
-	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
-		glfwSetWindowShouldClose(window, true);
-	}
-}
-
+/*
 int main() {
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -54,8 +55,8 @@ int main() {
 	
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-	/*glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);*/
+	// glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+	// glClear(GL_COLOR_BUFFER_BIT);
 
 	// We don't want our application to just draw and quit immediately. We want to the application to keep drawing images and 
 	// handling user input until the program has been explicitlyl told to stop. We thus create a while loop, 
@@ -79,3 +80,4 @@ int main() {
 
 	return 0;
 }
+*/
