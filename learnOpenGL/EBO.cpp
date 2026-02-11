@@ -145,7 +145,9 @@ int main() {
     glBindVertexArray(0);
 
     // uncomment this call to draw in wireframe polygons.
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);   // it just fills the enclosed areas.
+    // The first argument says we want to apply it to the front and back of all triangles and the second line tells us to draw them as lines. 
+
 
     while (!glfwWindowShouldClose(window)) {
         // input
