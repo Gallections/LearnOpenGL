@@ -42,20 +42,19 @@ GLFWwindow* initWindow(int width, int height) {
 }
 
 
-
-// OpenGL doesn't simply transform all your 3D coordinates to 2D pixels on your screen; OpenGL only processes 3D coordinates when 
-// they are in a specific range between -1.0 and 1.0 on all 3 axes (x, y, and z). All coordinates within this NDC (Normalized Device Coordinates) range 
-// will end up visible on your screen.
-
-float vertices[] = {
-	-0.5f, -0.5f, 0.0f,
-	0.5f, -0.5f, 0.0f,
-	0.0f, 0.5f, 0.0f
-};
-
-
 /*
 int main() {
+	// OpenGL doesn't simply transform all your 3D coordinates to 2D pixels on your screen; OpenGL only processes 3D coordinates when 
+	// they are in a specific range between -1.0 and 1.0 on all 3 axes (x, y, and z). All coordinates within this NDC (Normalized Device Coordinates) range 
+	// will end up visible on your screen.
+
+	float vertices[] = {
+		-0.5f, -0.5f, 0.0f,
+		0.5f, -0.5f, 0.0f,
+		0.0f, 0.5f, 0.0f
+	};
+
+
 	// Initialization of the windows:
 	GLFWwindow* myWindow = initWindow(800, 600);
 
