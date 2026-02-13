@@ -139,8 +139,13 @@
     <ClCompile Include="hello_triangle.cpp" />
     <ClCompile Include="hello_triangle_notes.cpp" />
     <ClCompile Include="multiple_attributes.cpp" />
+    <ClCompile Include="shader.cpp" />
+    <ClCompile Include="shader_exercises.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="shader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
