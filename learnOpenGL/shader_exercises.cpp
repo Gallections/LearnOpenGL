@@ -8,9 +8,10 @@
 // 1. Adjust the vertex shader so that the triangle is upside down:
 // We know an example of set of vertices would be
 float vertices[] = {
-    0.5f, -0.5f, 0.0f,  // bottom right
-    -0.5f, -0.5f, 0.0f,  // bottom left
-    0.0f,  0.5f, 0.0f,
+    // positions         // colors
+     0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,  // bottom right
+    -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,  // bottom left
+     0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f   // top 
 };
 // if we want to invert the triangle, we have to invert all the y components
 // thus in the shader code, we need to set the gl_Position to have the y component inverted

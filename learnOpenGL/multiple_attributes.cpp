@@ -1,7 +1,7 @@
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
 #include<iostream>
-
+/*
 // ---------------------------------------------------------------------------------------------------------
 void processInput(GLFWwindow* window)
 {
@@ -161,3 +161,4 @@ int main() {
     glfwTerminate();
     return 0;
 }
+*/
