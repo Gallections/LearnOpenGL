@@ -3,6 +3,7 @@
 #include <GLFW/glfw3.h>
 #include "shader.h"
 #include <iostream>
+#include <glm/glm.hpp>
 
 void processInput(GLFWwindow* window) {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
@@ -60,15 +61,29 @@ int main() {
 	// set up vertex data ( and buffer(s)) and configure vertex attributes;
 	float vertices[] = {
 		// positions          // colors           // texture coords
-		 0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f, // top right
-		 0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f, // bottom right
-		-0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f, // bottom left
-		-0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f  // top left 
+		 1.0f,  1.0f, 0.0f,   1.0f, 0.0f, 0.0f,   4.0f, 4.0f, // top right
+		 -1.0f, -1.0f, 0.0f,   0.0f, 1.0f, 1.0f,   0.0f, 0.0f, // bottom left
+		 1.0f, -1.0f, 0.0f,   0.0f, 0.0f, 1.0f,   2.0f, 0.0f, // bottom right
+		 -1.0f,  1.0f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 4.0f  // top left
 	};
+
 	unsigned int indices[] = {
 		0, 1, 3,
-		1, 2, 3
+		1, 2, 0
 	};
+
+	//float vertices[] = {
+	//	// positions          // colors           // texture coords
+	//	 0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f, // top right
+	//	 0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f, // bottom right
+	//	-0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f, // bottom left
+	//	-0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f  // top left 
+	//};
+
+	//unsigned int indices[] = {
+	//	0, 1, 3,
+	//	1, 2, 3
+	//};
 
 	unsigned int VBO, VAO, EBO;
 	glGenVertexArrays(1, &VAO);
