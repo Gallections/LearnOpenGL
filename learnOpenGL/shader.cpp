@@ -3,6 +3,9 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 Shader::Shader(const char * vertexPath, const char * fragmentPath) {
 	std::string vertexCode;
@@ -68,7 +71,7 @@ Shader::Shader(const char * vertexPath, const char * fragmentPath) {
 }
 
 // ========== activate the shader ===========
-void Shader::use() {
+void Shader::use() const{
 	glUseProgram(ID);
 }
 
@@ -82,6 +85,49 @@ void Shader::setInt(const std::string& name, int value) const {
 
 void Shader::setFloat(const std::string& name, float value) const {
 	glUniform1f(glGetUniformLocation(ID, name.c_str()), (float)value);
+}
+
+void Shader::setVec2(const std::string& name, const glm::vec2& value) const {
+	glUniform2fv(glGetUniformLocation(ID, name.c_str()), 1, &value[0]);
+	// glm::vec2 internall is something of this kind
+	//struct {
+	//	float x;
+	//	float y;
+	//};   // we notice they attributes are very close in memory.
+	// in this case, it's simply reading two floats from the memory location we provided. 
+	// '2fv' means we are reading 2 floats, from a vector pointer. 
+}
+
+void Shader::setVec2(const std::string& name, float x, float y) const {
+	glUniform2f(glGetUniformLocation(ID, name.c_str()), x, y);
+}
+
+void Shader::setVec3(const std::string& name, const glm::vec3& value) const {
+	glUniform3fv(glGetUniformLocation(ID, name.c_str()), 1, &value[0]);
+}
+
+void Shader::setVec3(const std::string& name, float x, float y, float z) const{
+	glUniform3f(glGetUniformLocation(ID, name.c_str()), x, y, z);
+}
+
+void Shader::setVec4(const std::string& name, const glm::vec4& value) const {
+	glUniform4fv(glGetUniformLocation(ID, name.c_str()), 1, &value[0]);
+}
+
+void Shader::setVec4(const std::string& name, float x, float y, float z, float w) const{
+	glUniform4f(glGetUniformLocation(ID, name.c_str()), x, y, z, w);
+}
+
+void Shader::setMat2(const std::string& name, const glm::mat2& mat) const {
+	glUniformMatrix2fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &mat[0][0]);  // the value 2 here in matrix, means 2 columns x 2 rows.
+}
+
+void Shader::setMat3(const std::string& name, const glm::mat3& mat) const {
+	glUniformMatrix3fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &mat[0][0]);
+}
+
+void Shader::setMat4(const std::string& name, const glm::mat4& mat) const {
+	glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &mat[0][0]);
 }
 
 void Shader::checkCompileErrors(unsigned int shader, std::string type) {

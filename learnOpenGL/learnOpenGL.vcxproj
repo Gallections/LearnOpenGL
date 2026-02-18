@@ -145,6 +145,7 @@
     <ClCompile Include="test.cpp" />
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="texture_exercise.cpp" />
+    <ClCompile Include="transformations.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +159,8 @@
   <ItemGroup>
     <None Include="4.1.texture.fs" />
     <None Include="4.1.texture.vs" />
+    <None Include="5.1.transform.fs" />
+    <None Include="5.1.transform.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

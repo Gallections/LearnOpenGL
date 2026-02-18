@@ -5,6 +5,7 @@
 #include <iostream>
 #include <glm/glm.hpp>
 
+/*
 void processInput(GLFWwindow* window) {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, true);
@@ -194,3 +195,5 @@ int main() {
 	glfwTerminate();
 	return 0;
 }
+
+*/
