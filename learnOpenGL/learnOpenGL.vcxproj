@@ -155,6 +155,7 @@
   <ItemGroup>
     <Image Include="..\..\..\..\Users\mosbi\Downloads\wood-container.jpg" />
     <Image Include="awesomeface.png" />
+    <Image Include="doge.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="4.1.texture.fs" />
