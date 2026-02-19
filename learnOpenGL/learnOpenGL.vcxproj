@@ -134,6 +134,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="basic_3d.cpp" />
     <ClCompile Include="EBO.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="hello_triangle.cpp" />
@@ -162,6 +163,8 @@
     <None Include="4.1.texture.vs" />
     <None Include="5.1.transform.fs" />
     <None Include="5.1.transform.vs" />
+    <None Include="6.1.coordinate_system.fs" />
+    <None Include="6.1.coordinate_system.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
