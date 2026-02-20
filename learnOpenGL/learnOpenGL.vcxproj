@@ -135,6 +135,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="basic_3d.cpp" />
+    <ClCompile Include="camera.cpp" />
     <ClCompile Include="EBO.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="hello_triangle.cpp" />
@@ -165,6 +166,8 @@
     <None Include="5.1.transform.vs" />
     <None Include="6.1.coordinate_system.fs" />
     <None Include="6.1.coordinate_system.vs" />
+    <None Include="7.1.camera.fs" />
+    <None Include="7.1.camera.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

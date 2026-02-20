@@ -16,6 +16,11 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 
+### Camera
+#### Basic camera revolutions
+<i>(02-19-2026)</i>
+![3d Camera Revolution](images/gl_camera_3d_revolve.gif)
+
 ### Coordinate System
 #### Basic Perspective Transform 3D
 <i>(02-18-2026)</i>

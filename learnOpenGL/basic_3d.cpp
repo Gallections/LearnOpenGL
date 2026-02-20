@@ -7,6 +7,8 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "shader.h"
 
+/*
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 	glViewport(0, 0, width, height);
 }
@@ -271,3 +273,5 @@ int main() {
     glfwTerminate();
 	return 0;
 }
+
+*/

@@ -57,6 +57,9 @@
     <ClCompile Include="basic_3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -94,6 +97,12 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="6.1.coordinate_system.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="7.1.camera.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="7.1.camera.fs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
