@@ -14,6 +14,9 @@ glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
 glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
 glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
 
+float horizontalAngle = 0.0f;
+float verticalAngle = 0.0f;
+
 float deltaTime = 0.0f;  // time between current frame and last frame.
 float lastFrame = 0.0f;
 
@@ -27,6 +30,8 @@ void processInput(GLFWwindow* window) {
 	}
 
 	float cameraSpeed = static_cast<float>(2.5 * deltaTime);
+    float rotationSpeed = static_cast<float>(30.0f * deltaTime);
+
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
 		cameraPos += cameraSpeed * cameraFront;
 	}
@@ -39,6 +44,29 @@ void processInput(GLFWwindow* window) {
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
 		cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
 	}
+    if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS) {
+        cameraPos += cameraUp * cameraSpeed;
+    }
+    if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS) {
+        cameraPos -= cameraUp * cameraSpeed;
+    }
+    if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) {
+        horizontalAngle += rotationSpeed;
+        cameraFront = glm::normalize(glm::vec3(cos(glm::radians(90.0f - horizontalAngle)), cameraFront.y, - sin(glm::radians(90.0f - horizontalAngle))));
+        // you may wonder how come we don't need to reset the right vector, this is becase every frame, the view matrix is being computed in the render loop. And the right vector is being recomputed based on the directional vector.
+    }
+    if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) {
+        horizontalAngle -= rotationSpeed;
+        cameraFront = glm::normalize(glm::vec3(cos(glm::radians(90.0f - horizontalAngle)), cameraFront.y, -sin(glm::radians(90.0f - horizontalAngle))));
+    }
+    if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
+        verticalAngle += rotationSpeed;
+        cameraFront = glm::normalize(glm::vec3(cameraFront.x, sin(glm::radians(verticalAngle)),  -cos(glm::radians(verticalAngle))));
+    }
+    if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
+        verticalAngle -= rotationSpeed;
+        cameraFront = glm::normalize(glm::vec3(cameraFront.x, sin(glm::radians(verticalAngle)), -cos(glm::radians(verticalAngle))));
+    }
 }
 
 int main() {
