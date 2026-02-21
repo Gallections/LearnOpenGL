@@ -148,6 +148,7 @@
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="texture_exercise.cpp" />
     <ClCompile Include="transformations.cpp" />
+    <ClCompile Include="walkaround.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +169,8 @@
     <None Include="6.1.coordinate_system.vs" />
     <None Include="7.1.camera.fs" />
     <None Include="7.1.camera.vs" />
+    <None Include="7.2.camera.fs" />
+    <None Include="7.2.camera.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
