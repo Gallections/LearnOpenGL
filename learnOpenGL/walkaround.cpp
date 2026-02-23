@@ -7,6 +7,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "stb_image.h"
 
+/*
 const unsigned SCR_WIDTH = 800;
 const unsigned SCR_HEIGHT = 600;
 
@@ -50,23 +51,29 @@ void processInput(GLFWwindow* window) {
     if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS) {
         cameraPos -= cameraUp * cameraSpeed;
     }
-    if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) {
-        horizontalAngle += rotationSpeed;
-        cameraFront = glm::normalize(glm::vec3(cos(glm::radians(90.0f - horizontalAngle)), cameraFront.y, - sin(glm::radians(90.0f - horizontalAngle))));
-        // you may wonder how come we don't need to reset the right vector, this is becase every frame, the view matrix is being computed in the render loop. And the right vector is being recomputed based on the directional vector.
-    }
-    if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) {
-        horizontalAngle -= rotationSpeed;
-        cameraFront = glm::normalize(glm::vec3(cos(glm::radians(90.0f - horizontalAngle)), cameraFront.y, -sin(glm::radians(90.0f - horizontalAngle))));
-    }
-    if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
-        verticalAngle += rotationSpeed;
-        cameraFront = glm::normalize(glm::vec3(cameraFront.x, sin(glm::radians(verticalAngle)),  -cos(glm::radians(verticalAngle))));
-    }
-    if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
-        verticalAngle -= rotationSpeed;
-        cameraFront = glm::normalize(glm::vec3(cameraFront.x, sin(glm::radians(verticalAngle)), -cos(glm::radians(verticalAngle))));
-    }
+
+
+    // BELOW IS AN ATTEMPT TO MAKE THIS ABLE TO LOOK AROUND. BUT FAILED.
+    //if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) {
+    //    horizontalAngle += rotationSpeed;
+    //    cameraFront = glm::normalize(glm::vec3(cos(glm::radians(90.0f - horizontalAngle)), cameraFront.y, - sin(glm::radians(90.0f - horizontalAngle))));
+    //    // you may wonder how come we don't need to reset the right vector, this is becase every frame, the view matrix is being computed in the render loop. And the right vector is being recomputed based on the directional vector.
+    //}
+    //if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) {
+    //    horizontalAngle -= rotationSpeed;
+    //    cameraFront = glm::normalize(glm::vec3(cos(glm::radians(90.0f - horizontalAngle)), cameraFront.y, -sin(glm::radians(90.0f - horizontalAngle))));
+    //}
+    //if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
+    //    verticalAngle += rotationSpeed;
+    //    cameraFront = glm::normalize(glm::vec3(cameraFront.x, sin(glm::radians(verticalAngle)),  -cos(glm::radians(verticalAngle))));
+    //}
+    //if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
+    //    verticalAngle -= rotationSpeed;
+    //    cameraFront = glm::normalize(glm::vec3(cameraFront.x, sin(glm::radians(verticalAngle)), -cos(glm::radians(verticalAngle))));      
+    //}
+
+
+    // NOTE: THIS IS STILL NOT WORKNG
 }
 
 int main() {
@@ -286,3 +293,5 @@ int main() {
 
 	return 0;
 }
+
+*/

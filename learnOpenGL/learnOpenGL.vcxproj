@@ -141,6 +141,7 @@
     <ClCompile Include="hello_triangle.cpp" />
     <ClCompile Include="hello_triangle_notes.cpp" />
     <ClCompile Include="multiple_attributes.cpp" />
+    <ClCompile Include="navigation3d.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="shader_exercises.cpp" />
     <ClCompile Include="stb_image.cpp" />
@@ -171,6 +172,8 @@
     <None Include="7.1.camera.vs" />
     <None Include="7.2.camera.fs" />
     <None Include="7.2.camera.vs" />
+    <None Include="7.3.camera.fs" />
+    <None Include="7.3.camera.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

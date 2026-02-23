@@ -17,12 +17,16 @@ This repository simply documents my hands-on learning journey and exercises cove
 ## Renders
 
 ### Camera
+#### Free 3D Space Navigation with Doge Cubes
+<i>(02-22-2026)</i>
+![Free 3D Space Navigation](images/gl_3d_navigation.gif)
+
 #### Basic camera revolutions
 <i>(02-19-2026)</i>
 ![3d Camera Revolution](images/gl_camera_3d_revolve.gif)
 
 ### Coordinate System
-#### Basic Perspective Transform 3D
+#### Basic Perspective Transform 3D Multiple
 <i>(02-18-2026)</i>
 ![Perspective Transformation](images/doge_transformation_3d_multiple.gif)
 
