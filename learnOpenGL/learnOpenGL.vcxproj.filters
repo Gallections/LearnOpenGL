@@ -66,12 +66,18 @@
     <ClCompile Include="navigation3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="colors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\Users\mosbi\Downloads\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -121,6 +127,18 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="7.3.camera.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="1.colors.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="1.colors.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="1.light_cube.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="1.light_cube.vs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
