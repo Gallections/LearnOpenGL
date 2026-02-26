@@ -15,6 +15,10 @@ This repository simply documents my hands-on learning journey and exercises cove
 - [License](#license)
 
 ## Renders
+### Lighting
+#### Basic Light Source and Color Render
+<i>(02-25-2026)</i>
+![Basic Light Source and colored object](images/color_lighting_basics.gif)
 
 ### Camera
 #### Free 3D Space Navigation with Doge Cubes
