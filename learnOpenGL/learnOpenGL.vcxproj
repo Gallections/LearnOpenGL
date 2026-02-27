@@ -135,6 +135,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="basic_3d.cpp" />
+    <ClCompile Include="basic_lighting.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="colors.cpp" />
     <ClCompile Include="EBO.cpp" />
