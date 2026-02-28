@@ -144,5 +144,17 @@
     <None Include="1.light_cube.vs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="2.2.basic_lighting.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="2.2.basic_lighting.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="2.2.light_cube.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="2.2.light_cube.vs">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

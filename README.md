@@ -16,6 +16,10 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Lighting
+#### Phong Model Basic Setup
+<i>(02-27-2026)</i>
+![Phong Model Basic Setup](images/phong_model_basics.gif)
+
 #### Basic Light Source and Color Render
 <i>(02-25-2026)</i>
 ![Basic Light Source and colored object](images/color_lighting_basics.gif)
