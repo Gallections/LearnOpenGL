@@ -144,6 +144,7 @@
     <ClCompile Include="hello_triangle_notes.cpp" />
     <ClCompile Include="multiple_attributes.cpp" />
     <ClCompile Include="navigation3d.cpp" />
+    <ClCompile Include="phong_material_model.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="shader_exercises.cpp" />
     <ClCompile Include="stb_image.cpp" />
@@ -173,6 +174,10 @@
     <None Include="2.2.basic_lighting.vs" />
     <None Include="2.2.light_cube.fs" />
     <None Include="2.2.light_cube.vs" />
+    <None Include="3.1.light_cube.fs" />
+    <None Include="3.1.light_cube.vs" />
+    <None Include="3.1.materials.fs" />
+    <None Include="3.1.materials.vs" />
     <None Include="4.1.texture.fs" />
     <None Include="4.1.texture.vs" />
     <None Include="5.1.transform.fs" />

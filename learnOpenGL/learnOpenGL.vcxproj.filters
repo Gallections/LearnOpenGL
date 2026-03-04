@@ -72,6 +72,9 @@
     <ClCompile Include="basic_lighting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="phong_material_model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -154,6 +157,18 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="2.2.light_cube.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.materials.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.materials.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.light_cube.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.light_cube.fs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

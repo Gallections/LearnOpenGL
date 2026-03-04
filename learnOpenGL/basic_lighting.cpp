@@ -7,7 +7,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-
+/*
 unsigned int SCR_WIDTH = 800, SCR_HEIGHT = 600;
 
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
@@ -227,3 +227,4 @@ int main() {
 
 }
 
+*/
