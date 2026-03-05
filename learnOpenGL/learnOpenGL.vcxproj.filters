@@ -75,6 +75,9 @@
     <ClCompile Include="phong_material_model.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lightmaps_phong.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -95,6 +98,12 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="doge.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="container2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="container2_specular.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -169,6 +178,18 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="3.1.light_cube.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="4.2.lighting_maps.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="4.2.lighting_maps.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="4.2.light_cube.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="4.2.light_cube.vs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

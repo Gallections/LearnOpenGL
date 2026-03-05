@@ -142,6 +142,7 @@
     <ClCompile Include="glad.c" />
     <ClCompile Include="hello_triangle.cpp" />
     <ClCompile Include="hello_triangle_notes.cpp" />
+    <ClCompile Include="lightmaps_phong.cpp" />
     <ClCompile Include="multiple_attributes.cpp" />
     <ClCompile Include="navigation3d.cpp" />
     <ClCompile Include="phong_material_model.cpp" />
@@ -163,6 +164,8 @@
   <ItemGroup>
     <Image Include="..\..\..\..\Users\mosbi\Downloads\wood-container.jpg" />
     <Image Include="awesomeface.png" />
+    <Image Include="container2.png" />
+    <Image Include="container2_specular.png" />
     <Image Include="doge.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +183,10 @@
     <None Include="3.1.materials.vs" />
     <None Include="4.1.texture.fs" />
     <None Include="4.1.texture.vs" />
+    <None Include="4.2.lighting_maps.fs" />
+    <None Include="4.2.lighting_maps.vs" />
+    <None Include="4.2.light_cube.fs" />
+    <None Include="4.2.light_cube.vs" />
     <None Include="5.1.transform.fs" />
     <None Include="5.1.transform.vs" />
     <None Include="6.1.coordinate_system.fs" />
