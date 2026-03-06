@@ -8,6 +8,7 @@
 #include "shader.h"
 #include "stb_image.h"
 
+/*
 const unsigned int SCR_WIDTH = 1000;
 const unsigned int SCR_HEIGHT = 800;
 
@@ -293,3 +294,5 @@ int main() {
     glfwTerminate();
     return 0;
 }
+
+*/

@@ -16,6 +16,10 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Lighting
+#### Point Light 
+<i>(03-05-2026)</i>
+![Phong Point light model](images/point_light.gif)
+
 #### Phong Lighting Maps Material Model
 <i>(03-04-2026)</i>
 ![Phong Lighting Maps Material Model](images/lightmaps_phong.gif)

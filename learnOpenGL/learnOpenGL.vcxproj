@@ -138,6 +138,7 @@
     <ClCompile Include="basic_lighting.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="colors.cpp" />
+    <ClCompile Include="directional_light.cpp" />
     <ClCompile Include="EBO.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="hello_triangle.cpp" />
@@ -187,8 +188,14 @@
     <None Include="4.2.lighting_maps.vs" />
     <None Include="4.2.light_cube.fs" />
     <None Include="4.2.light_cube.vs" />
+    <None Include="5.1.light_casters.fs" />
+    <None Include="5.1.light_casters.vs" />
+    <None Include="5.1.light_cube.fs" />
+    <None Include="5.1.light_cube.vs" />
     <None Include="5.1.transform.fs" />
     <None Include="5.1.transform.vs" />
+    <None Include="5.2.light_casters.fs" />
+    <None Include="5.2.light_casters.vs" />
     <None Include="6.1.coordinate_system.fs" />
     <None Include="6.1.coordinate_system.vs" />
     <None Include="7.1.camera.fs" />

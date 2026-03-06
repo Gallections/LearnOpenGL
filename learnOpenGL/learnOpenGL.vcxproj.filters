@@ -78,6 +78,9 @@
     <ClCompile Include="lightmaps_phong.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="directional_light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -190,6 +193,24 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="4.2.light_cube.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.light_casters.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.light_casters.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.light_cube.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.light_cube.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.2.light_casters.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.2.light_casters.vs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
