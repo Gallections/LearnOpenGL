@@ -140,6 +140,7 @@
     <ClCompile Include="colors.cpp" />
     <ClCompile Include="directional_light.cpp" />
     <ClCompile Include="EBO.cpp" />
+    <ClCompile Include="flashlight.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="hello_triangle.cpp" />
     <ClCompile Include="hello_triangle_notes.cpp" />
@@ -196,6 +197,8 @@
     <None Include="5.1.transform.vs" />
     <None Include="5.2.light_casters.fs" />
     <None Include="5.2.light_casters.vs" />
+    <None Include="5.3.light_casters.fs" />
+    <None Include="5.3.light_casters.vs" />
     <None Include="6.1.coordinate_system.fs" />
     <None Include="6.1.coordinate_system.vs" />
     <None Include="7.1.camera.fs" />

@@ -16,7 +16,12 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Lighting
-#### Point Light 
+
+#### Interesting Game Effect (Flashlight with hardedges)
+<i>(03-07-2026)</i>
+![Phong Flash light with hard edges](images/flashlight_hard.gif)
+
+#### Point Light
 <i>(03-05-2026)</i>
 ![Phong Point light model](images/point_light.gif)
 
