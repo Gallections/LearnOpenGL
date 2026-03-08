@@ -16,6 +16,9 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Lighting
+#### Flashlight 
+<i>(03-07-2026)</i>
+![Phong Flash light effect](images/flashlight.gif)
 
 #### Interesting Game Effect (Flashlight with hardedges)
 <i>(03-07-2026)</i>

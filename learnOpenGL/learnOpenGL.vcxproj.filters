@@ -222,5 +222,6 @@
     <None Include="5.3.light_casters.vs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="5.4.light_casters.fs" />
   </ItemGroup>
 </Project>

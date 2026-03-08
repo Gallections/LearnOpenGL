@@ -199,6 +199,7 @@
     <None Include="5.2.light_casters.vs" />
     <None Include="5.3.light_casters.fs" />
     <None Include="5.3.light_casters.vs" />
+    <None Include="5.4.light_casters.fs" />
     <None Include="6.1.coordinate_system.fs" />
     <None Include="6.1.coordinate_system.vs" />
     <None Include="7.1.camera.fs" />

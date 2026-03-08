@@ -337,7 +337,7 @@ int main() {
     glDeleteVertexArrays(1, &lightCubeVAO);
     glDeleteBuffers(1, &VBO);
     
-    glfwTerminate();
+    glfwTerminate();    
     return 0;
 }
 
