@@ -16,6 +16,10 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Lighting
+#### Multiple Lights
+<i>(03-08-2026)</i>
+![Multiple Lights](images/multiple_lights.gif)
+
 #### Flashlight 
 <i>(03-07-2026)</i>
 ![Phong Flash light effect](images/flashlight.gif)

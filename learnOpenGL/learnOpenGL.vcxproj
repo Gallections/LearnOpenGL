@@ -146,6 +146,7 @@
     <ClCompile Include="hello_triangle_notes.cpp" />
     <ClCompile Include="lightmaps_phong.cpp" />
     <ClCompile Include="multiple_attributes.cpp" />
+    <ClCompile Include="multiple_lights.cpp" />
     <ClCompile Include="navigation3d.cpp" />
     <ClCompile Include="phong_material_model.cpp" />
     <ClCompile Include="shader.cpp" />
@@ -202,6 +203,10 @@
     <None Include="5.4.light_casters.fs" />
     <None Include="6.1.coordinate_system.fs" />
     <None Include="6.1.coordinate_system.vs" />
+    <None Include="6.light_cube.fs" />
+    <None Include="6.light_cube.vs" />
+    <None Include="6.multiple_lights.vs" />
+    <None Include="6.multiple_lights.fs" />
     <None Include="7.1.camera.fs" />
     <None Include="7.1.camera.vs" />
     <None Include="7.2.camera.fs" />
