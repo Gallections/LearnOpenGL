@@ -162,6 +162,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Users\mosbi\Downloads\stb_image.h" />
     <ClInclude Include="camera.h" />
+    <ClInclude Include="mesh.h" />
     <ClInclude Include="shader.h" />
   </ItemGroup>
   <ItemGroup>
