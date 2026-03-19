@@ -16,6 +16,10 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Advanced OpenGL
+### Rendering Transparent
+<i>(03-18-2026)</i>
+![Discarding Transparent Fragments](images/rendering_transparent.gif)
+
 #### Object Outlining
 <i>(03-18-2026)</i>
 ![Object Outlining](images/object_outlining.gif)

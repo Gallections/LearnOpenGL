@@ -158,6 +158,7 @@
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="texture_exercise.cpp" />
     <ClCompile Include="transformations.cpp" />
+    <ClCompile Include="transparent_render.cpp" />
     <ClCompile Include="walkaround.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
@@ -176,6 +177,7 @@
     <Image Include="container2_specular.png" />
     <Image Include="doge.jpg" />
     <Image Include="galvinized-metal-diffuse.jpg" />
+    <Image Include="grass.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1.colors.fs" />
@@ -191,6 +193,8 @@
     <None Include="2.stencil_single_color.fs" />
     <None Include="2.stencil_testing.fs" />
     <None Include="2.stencil_testing.vs" />
+    <None Include="3.1.blending.fs" />
+    <None Include="3.1.blending.vs" />
     <None Include="3.1.light_cube.fs" />
     <None Include="3.1.light_cube.vs" />
     <None Include="3.1.materials.fs" />

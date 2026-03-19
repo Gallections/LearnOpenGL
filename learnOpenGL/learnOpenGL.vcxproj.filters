@@ -93,6 +93,9 @@
     <ClCompile Include="object_outlining.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="transparent_render.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -131,6 +134,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="black_marble_diffuse.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="grass.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -273,5 +279,7 @@
     <None Include="2.stencil_single_color.fs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="3.1.blending.vs" />
+    <None Include="3.1.blending.fs" />
   </ItemGroup>
 </Project>
