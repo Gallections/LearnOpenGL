@@ -87,6 +87,12 @@
     <ClCompile Include="multiple_lights.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="backpack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="object_outlining.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -99,6 +105,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="model.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -116,6 +125,12 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="container2_specular.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="galvinized-metal-diffuse.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="black_marble_diffuse.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -241,6 +256,21 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="6.light_cube.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="1.model_loading.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="1.model_loading.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="2.stencil_testing.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="2.stencil_testing.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="2.stencil_single_color.fs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

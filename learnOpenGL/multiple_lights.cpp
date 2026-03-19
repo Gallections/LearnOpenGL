@@ -8,6 +8,7 @@
 #include "stb_image.h"
 #include <iostream>
 
+/*
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
@@ -389,3 +390,5 @@ int main() {
     glfwTerminate();
     return 0;
 }
+
+*/

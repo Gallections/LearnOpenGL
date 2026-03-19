@@ -15,6 +15,11 @@ This repository simply documents my hands-on learning journey and exercises cove
 - [License](#license)
 
 ## Renders
+### Advanced OpenGL
+#### Object Outlining
+<i>(03-18-2026)</i>
+![Object Outlining](images/object_outlining.gif)
+
 ### Lighting
 #### Multiple Lights
 <i>(03-08-2026)</i>
