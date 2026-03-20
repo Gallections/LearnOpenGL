@@ -16,6 +16,10 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Advanced OpenGL
+### Semi Transparent Renders (Back to front rendering order)
+<i>(03-20-2026)</i>
+![Rendering a semi transparent window](images/semi-transparent-renders.gif)
+
 ### Rendering Transparent
 <i>(03-18-2026)</i>
 ![Discarding Transparent Fragments](images/rendering_transparent.gif)

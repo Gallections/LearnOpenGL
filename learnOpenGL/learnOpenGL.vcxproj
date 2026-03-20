@@ -151,6 +151,7 @@
     <ClCompile Include="navigation3d.cpp" />
     <ClCompile Include="object_outlining.cpp" />
     <ClCompile Include="phong_material_model.cpp" />
+    <ClCompile Include="semi-transparent-windows.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="shader_exercises.cpp" />
     <ClCompile Include="stb_image.cpp" />
@@ -178,6 +179,7 @@
     <Image Include="doge.jpg" />
     <Image Include="galvinized-metal-diffuse.jpg" />
     <Image Include="grass.png" />
+    <Image Include="window.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1.colors.fs" />

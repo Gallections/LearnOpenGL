@@ -96,6 +96,9 @@
     <ClCompile Include="transparent_render.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="semi-transparent-windows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -137,6 +140,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="grass.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="window.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
