@@ -142,6 +142,7 @@
     <ClCompile Include="directional_light.cpp" />
     <ClCompile Include="EBO.cpp" />
     <ClCompile Include="flashlight.cpp" />
+    <ClCompile Include="framebuffers.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="hello_triangle.cpp" />
     <ClCompile Include="hello_triangle_notes.cpp" />
@@ -207,6 +208,15 @@
     <None Include="4.2.lighting_maps.vs" />
     <None Include="4.2.light_cube.fs" />
     <None Include="4.2.light_cube.vs" />
+    <None Include="5.1.blur.fs" />
+    <None Include="5.1.contrast.fs" />
+    <None Include="5.1.edge_detection.fs" />
+    <None Include="5.1.framebuffers.fs" />
+    <None Include="5.1.framebuffers.vs" />
+    <None Include="5.1.framebuffers_screen.fs" />
+    <None Include="5.1.framebuffers_screen.vs" />
+    <None Include="5.1.grayscale.fs" />
+    <None Include="5.1.inversion.fs" />
     <None Include="5.1.light_casters.fs" />
     <None Include="5.1.light_casters.vs" />
     <None Include="5.1.light_cube.fs" />

@@ -16,7 +16,23 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Advanced OpenGL
-### Semi Transparent Renders (Back to front rendering order)
+#### Edge Detection
+<i>(03-28-2026)</i>
+![](images/edge_detection_rendering.gif)
+
+#### Blurry Rendering
+<i>(03-28-2026)</i>
+![Blurry Rendering](images/blur_rendering.gif)
+
+#### Grayscale 
+<i>(03-28-2026)</i>
+![Grayscale](images/grayscale_rendering.gif)
+
+#### Inversion
+<i>(03-28-2026)</i>
+![Inversion](images/inversion_rendering.gif)
+
+#### Semi Transparent Renders (Back to front rendering order)
 <i>(03-20-2026)</i>
 ![Rendering a semi transparent window](images/semi-transparent-renders.gif)
 

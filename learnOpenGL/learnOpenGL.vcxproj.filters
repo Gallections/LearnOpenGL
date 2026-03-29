@@ -99,6 +99,9 @@
     <ClCompile Include="semi-transparent-windows.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="framebuffers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -285,7 +288,38 @@
     <None Include="2.stencil_single_color.fs">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="3.1.blending.vs" />
-    <None Include="3.1.blending.fs" />
+    <None Include="3.1.blending.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.blending.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.framebuffers.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.framebuffers.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.framebuffers_screen.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.framebuffers_screen.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.contrast.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.edge_detection.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.grayscale.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.inversion.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="5.1.blur.fs">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
