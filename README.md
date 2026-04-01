@@ -16,9 +16,13 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Advanced OpenGL
+#### Skybox 
+<i>(03-32-2026)</i>
+![Skybox](images/skybox.gif)
+
 #### Edge Detection
 <i>(03-28-2026)</i>
-![](images/edge_detection_rendering.gif)
+![Edge Detection](images/edge_detection_rendering.gif)
 
 #### Blurry Rendering
 <i>(03-28-2026)</i>

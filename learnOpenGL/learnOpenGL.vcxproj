@@ -139,6 +139,7 @@
     <ClCompile Include="basic_lighting.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="colors.cpp" />
+    <ClCompile Include="cubemaps_skybox.cpp" />
     <ClCompile Include="directional_light.cpp" />
     <ClCompile Include="EBO.cpp" />
     <ClCompile Include="flashlight.cpp" />
@@ -230,6 +231,10 @@
     <None Include="5.4.light_casters.fs" />
     <None Include="6.1.coordinate_system.fs" />
     <None Include="6.1.coordinate_system.vs" />
+    <None Include="6.1.cubemaps.fs" />
+    <None Include="6.1.cubemaps.vs" />
+    <None Include="6.1.skybox.fs" />
+    <None Include="6.1.skybox.vs" />
     <None Include="6.light_cube.fs" />
     <None Include="6.light_cube.vs" />
     <None Include="6.multiple_lights.vs" />

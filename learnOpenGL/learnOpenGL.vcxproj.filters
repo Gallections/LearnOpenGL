@@ -102,6 +102,9 @@
     <ClCompile Include="framebuffers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cubemaps_skybox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -319,6 +322,18 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="5.1.blur.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="6.1.cubemaps.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="6.1.cubemaps.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="6.1.skybox.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="6.1.skybox.fs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
