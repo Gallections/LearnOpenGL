@@ -16,8 +16,17 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Advanced OpenGL
+#### Environmental Rendering
+##### Air to Glass Refraction
+<i>(04-04-2026)</i>
+![Enviornmental Refraction](images/environemntal_refraction.gif)
+
+##### Reflections Only
+<i>(04-03-2026)</i>
+![Environmental Reflections](images/environmental_rendering.gif)
+
 #### Skybox 
-<i>(03-32-2026)</i>
+<i>(03-31-2026)</i>
 ![Skybox](images/skybox.gif)
 
 #### Edge Detection

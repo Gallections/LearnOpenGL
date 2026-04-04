@@ -105,6 +105,9 @@
     <ClCompile Include="cubemaps_skybox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="environmental_reflection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -334,6 +337,18 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="6.1.skybox.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="6.2.cubemaps.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="6.2.cubemaps.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="6.2.skybox.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="6.2.skybox.vs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
