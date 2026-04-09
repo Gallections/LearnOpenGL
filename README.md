@@ -16,6 +16,10 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Advanced OpenGL
+#### Uniform Buffer Objects
+<i>(04-08-2026)</i>
+![Uniform Buffer Objects](images/ubo.png)
+
 #### Environmental Rendering
 ##### Air to Glass Refraction
 <i>(04-04-2026)</i>

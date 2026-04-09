@@ -108,6 +108,9 @@
     <ClCompile Include="environmental_reflection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ubo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -349,6 +352,27 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="6.2.skybox.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="6.2.transparent.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="6.2.transparent.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="8.advanced_glsl.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="8.blue.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="8.green.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="8.red.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="8.yellow.fs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

@@ -163,6 +163,7 @@
     <ClCompile Include="texture_exercise.cpp" />
     <ClCompile Include="transformations.cpp" />
     <ClCompile Include="transparent_render.cpp" />
+    <ClCompile Include="ubo.cpp" />
     <ClCompile Include="walkaround.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
@@ -240,6 +241,8 @@
     <None Include="6.2.cubemaps.vs" />
     <None Include="6.2.skybox.fs" />
     <None Include="6.2.skybox.vs" />
+    <None Include="6.2.transparent.fs" />
+    <None Include="6.2.transparent.vs" />
     <None Include="6.light_cube.fs" />
     <None Include="6.light_cube.vs" />
     <None Include="6.multiple_lights.vs" />
@@ -250,6 +253,11 @@
     <None Include="7.2.camera.vs" />
     <None Include="7.3.camera.fs" />
     <None Include="7.3.camera.vs" />
+    <None Include="8.advanced_glsl.vs" />
+    <None Include="8.blue.fs" />
+    <None Include="8.green.fs" />
+    <None Include="8.red.fs" />
+    <None Include="8.yellow.fs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
