@@ -16,6 +16,10 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Advanced OpenGL
+#### Exploding Normals
+<i>(04-10-2026)</i>
+![Normal Explosions](images/explosion_normals.gif)
+
 #### Uniform Buffer Objects
 <i>(04-08-2026)</i>
 ![Uniform Buffer Objects](images/ubo.png)

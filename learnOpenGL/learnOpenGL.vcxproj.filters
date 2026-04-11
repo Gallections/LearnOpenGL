@@ -111,6 +111,12 @@
     <ClCompile Include="ubo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="drawing_houses.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="explosion_normals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -373,6 +379,24 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="8.yellow.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="9.1.geometry_shader.gs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="9.1.geometry_shader.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="9.1.geometry_shader.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="9.2.geometry_shader.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="9.2.geometry_shader.gs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="9.2.geometry_shader.vs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
