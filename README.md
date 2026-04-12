@@ -16,6 +16,10 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Advanced OpenGL
+#### Instancing Ex 1
+<i>(04-11-2026)</i>
+![Instancing Example 1](images/instancing.png)
+
 #### Exploding Normals
 <i>(04-10-2026)</i>
 ![Normal Explosions](images/explosion_normals.gif)

@@ -117,6 +117,9 @@
     <ClCompile Include="explosion_normals.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="isntancing_100_quads.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -397,6 +400,12 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="9.2.geometry_shader.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="10.1.instancing.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="10.1.instancing.fs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

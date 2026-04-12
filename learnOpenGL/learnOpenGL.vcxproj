@@ -149,6 +149,7 @@
     <ClCompile Include="glad.c" />
     <ClCompile Include="hello_triangle.cpp" />
     <ClCompile Include="hello_triangle_notes.cpp" />
+    <ClCompile Include="isntancing_100_quads.cpp" />
     <ClCompile Include="lightmaps_phong.cpp" />
     <ClCompile Include="multiple_attributes.cpp" />
     <ClCompile Include="multiple_lights.cpp" />
@@ -194,6 +195,8 @@
     <None Include="1.light_cube.vs" />
     <None Include="1.model_loading.fs" />
     <None Include="1.model_loading.vs" />
+    <None Include="10.1.instancing.fs" />
+    <None Include="10.1.instancing.vs" />
     <None Include="2.2.basic_lighting.fs" />
     <None Include="2.2.basic_lighting.vs" />
     <None Include="2.2.light_cube.fs" />
