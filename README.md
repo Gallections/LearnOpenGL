@@ -16,6 +16,10 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Advanced OpenGL
+#### Asteroids
+<i>(04-12-2026)</i>
+![Asteroids](images/asteroids.gif)
+
 #### Instancing Ex 1
 <i>(04-11-2026)</i>
 ![Instancing Example 1](images/instancing.png)

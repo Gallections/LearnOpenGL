@@ -120,6 +120,9 @@
     <ClCompile Include="isntancing_100_quads.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="asteroid_rendering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -406,6 +409,18 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="10.1.instancing.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="10.3.planet.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="10.3.asteroids.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="10.3.asteroids.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="10.3.planet.fs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
