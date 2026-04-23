@@ -15,6 +15,15 @@ This repository simply documents my hands-on learning journey and exercises cove
 - [License](#license)
 
 ## Renders
+### Advaned Lighting
+#### Shadow Rendering
+<i>(04-22-2026) </i>
+![Shadow Rendering with artifacts](images/shadow_rendering_artifacts.gif)
+
+#### Gamma Correction
+<i>(04-19-2026)</i>
+![Gamma Corrections](images/gamma_correction.gif)
+
 ### Advanced OpenGL
 #### Asteroids
 <i>(04-12-2026)</i>

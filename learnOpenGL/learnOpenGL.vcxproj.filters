@@ -123,6 +123,18 @@
     <ClCompile Include="asteroid_rendering.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="offscreen_MSAA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gamma_correction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="render_depth_map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rendering_shadows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -423,5 +435,41 @@
     <None Include="10.3.planet.fs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="11.2.anti_aliasing.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="11.2.aa_post.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="11.2.aa_post.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="11.2.anti_aliasing.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="2.gamma_correction.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="2.gamma_correction.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.1.debug_quad.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.1.debug_quad_depth.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.1.shadow_mapping_depth.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.1.shadow_mapping_depth.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.2.shadow_mapping.vs" />
+    <None Include="3.1.2.shadow_mapping.fs" />
+    <None Include="3.1.2.shadow_mapping_depth.vs" />
+    <None Include="3.1.2.shadow_mapping_depth.fs" />
+    <None Include="3.1.2.debug_quad.vs" />
+    <None Include="3.1.2.debug_quad_depth.fs" />
   </ItemGroup>
 </Project>
