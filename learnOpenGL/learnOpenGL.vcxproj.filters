@@ -135,6 +135,9 @@
     <ClCompile Include="rendering_shadows.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="point_shadows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -465,11 +468,28 @@
     <None Include="3.1.1.shadow_mapping_depth.vs">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="3.1.2.shadow_mapping.vs" />
-    <None Include="3.1.2.shadow_mapping.fs" />
-    <None Include="3.1.2.shadow_mapping_depth.vs" />
-    <None Include="3.1.2.shadow_mapping_depth.fs" />
-    <None Include="3.1.2.debug_quad.vs" />
-    <None Include="3.1.2.debug_quad_depth.fs" />
+    <None Include="3.1.2.debug_quad.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.2.debug_quad_depth.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.2.shadow_mapping.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.2.shadow_mapping.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.2.shadow_mapping_depth.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.1.2.shadow_mapping_depth.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="3.2.2.point_shadows.vs" />
+    <None Include="3.2.2.point_shadows.fs" />
+    <None Include="3.2.2.point_shadows_depth.vs" />
+    <None Include="3.2.2.point_shadows_depth.fs" />
+    <None Include="3.2.2.point_shadow_depth.gs" />
   </ItemGroup>
 </Project>

@@ -16,6 +16,10 @@ This repository simply documents my hands-on learning journey and exercises cove
 
 ## Renders
 ### Advaned Lighting
+#### Point Shadowing
+<i>(04-26-2026) </i>
+![Point Shadowing](images/point_shadows.gif)
+
 #### Shadow Rendering
 <i>(04-22-2026) </i>
 ![Shadow Rendering with artifacts](images/shadow_rendering_artifacts.gif)

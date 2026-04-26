@@ -160,6 +160,7 @@
     <ClCompile Include="offscreen_MSAA.cpp" />
     <ClCompile Include="phong_material_model.cpp" />
     <ClCompile Include="environmental_reflection.cpp" />
+    <ClCompile Include="point_shadows.cpp" />
     <ClCompile Include="rendering_shadows.cpp" />
     <ClCompile Include="render_depth_map.cpp" />
     <ClCompile Include="semi-transparent-windows.cpp" />
@@ -235,6 +236,11 @@
     <None Include="3.1.light_cube.vs" />
     <None Include="3.1.materials.fs" />
     <None Include="3.1.materials.vs" />
+    <None Include="3.2.2.point_shadows.fs" />
+    <None Include="3.2.2.point_shadows.vs" />
+    <None Include="3.2.2.point_shadows_depth.fs" />
+    <None Include="3.2.2.point_shadows_depth.vs" />
+    <None Include="3.2.2.point_shadow_depth.gs" />
     <None Include="4.1.texture.fs" />
     <None Include="4.1.texture.vs" />
     <None Include="4.2.lighting_maps.fs" />
